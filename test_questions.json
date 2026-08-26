@@ -1,1 +1,82 @@
-
+[
+  {
+    "id": "101",
+    "subject": "Physics",
+    "chapter": "Kinematics",
+    "topic": "Projectile Motion",
+    "difficulty": "Medium",
+    "question_text": "A particle is projected with a velocity u at an angle theta with the horizontal. The magnitude of change in velocity when it reaches the highest point is:",
+    "options": [
+      "u cos(theta)",
+      "u sin(theta)",
+      "u",
+      "zero"
+    ],
+    "correct_option": "u sin(theta)",
+    "explanation": "Initial velocity vector v_i = u cos(theta)i + u sin(theta)j. At the highest point, v_f = u cos(theta)i. Change in velocity delta_v = v_f - v_i = -u sin(theta)j. Magnitude = u sin(theta)."
+  },
+  {
+    "id": "Q02",
+    "subject": "Physics",
+    "chapter": "Work, Energy & Power",
+    "topic": "Work-Energy Theorem",
+    "difficulty": "Hard",
+    "question_text": "A force F = (3x^2 + 2x) N acts on a body of mass 2 kg moving along the x-axis. The work done by this force in displacing the body from x = 1 m to x = 3 m is:",
+    "options": [
+      "34 J",
+      "26 J",
+      "18 J",
+      "42 J"
+    ],
+    "correct_option": "34 J",
+    "explanation": "Work done W = integral(F dx) from 1 to 3. W = integral(3x^2 + 2x) dx = [x^3 + x^2] from 1 to 3 = (27 + 9) - (1 + 1) = 36 - 2 = 34 J."
+  },
+  {
+    "id": "Q03",
+    "subject": "Chemistry",
+    "chapter": "Chemical Bonding",
+    "topic": "Hybridization & VSEPR",
+    "difficulty": "Easy",
+    "question_text": "Which of the following species has a see-saw geometry?",
+    "options": [
+      "SF4",
+      "XeF4",
+      "CCl4",
+      "NH4+"
+    ],
+    "correct_option": "SF4",
+    "explanation": "SF4 has 4 bond pairs and 1 lone pair around the central sulfur atom (sp3d hybridization), resulting in a see-saw molecular geometry."
+  },
+  {
+    "id": "Q04",
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "topic": "Enthalpy & Spontaneity",
+    "difficulty": "Medium",
+    "question_text": "For an endothermic reaction to be spontaneous at temperature T, which of the following conditions must be satisfied?",
+    "options": [
+      "Delta H < 0 and Delta S > 0",
+      "Delta H > 0 and T Delta S > Delta H",
+      "Delta H > 0 and T Delta S < Delta H",
+      "Delta H < 0 and Delta S < 0"
+    ],
+    "correct_option": "Delta H > 0 and T Delta S > Delta H",
+    "explanation": "Spontaneity requires Delta G = Delta H - T Delta S < 0. For an endothermic reaction (Delta H > 0), Delta G becomes negative only if T Delta S > Delta H."
+  },
+  {
+    "id": "Q05",
+    "subject": "Mathematics",
+    "chapter": "Calculus",
+    "topic": "Limits & Continuity",
+    "difficulty": "Medium",
+    "question_text": "Evaluate the limit: lim_{x -> 0} (sin(5x) - sin(3x)) / x.",
+    "options": [
+      "2",
+      "8",
+      "15",
+      "0"
+    ],
+    "correct_option": "2",
+    "explanation": "lim_{x -> 0} (sin(5x)/x) - lim_{x -> 0} (sin(3x)/x) = 5 - 3 = 2."
+  }
+]
