@@ -80,7 +80,7 @@ def run_test_session(selected_questions):
 
 if __name__ == "__main__":
    
-    questions_data = load_question_bank('dummy_questions.json')
+    questions_data = load_question_bank('test_questions.json')
     
     if questions_data:
         topics_to_select = [
