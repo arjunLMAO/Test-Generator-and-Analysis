@@ -9,19 +9,19 @@ def generate_test(json_file, selected_topics, num_questions=3):
         print(f"Error: Could not find '{json_file}'. Make sure the file exists.")
         return []
     
-    # Filter questions matching selected topics
+   
     filtered = [q for q in all_questions if q.get('topic') in selected_topics]
     
     if not filtered:
         print("No questions found for the selected topics.")
         return []
     
-    # Safely sample questions up to the available total
+  
     selected = random.sample(filtered, min(num_questions, len(filtered)))
     return selected
 
 if __name__ == "__main__":
-    # Test execution
+    
     topics = ['Projectile Motion', 'Limits & Continuity']
     selected = generate_test('dummy_questions.json', topics)
 
