@@ -2,17 +2,28 @@ import json
 import random
 
 def generate_test(json_file, selected_topics, num_questions=3):
-    with open(json_file, 'r') as f:
-        all_questions = json.load(f)
+    try:
+        with open(json_file, 'r') as f:
+            all_questions = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: Could not find '{json_file}'. Make sure the file exists.")
+        return []
     
-    # Filter by topic
-    filtered = [q for q in all_questions if q['topic'] in selected_topics]
+    # Filter questions matching selected topics
+    filtered = [q for q in all_questions if q.get('topic') in selected_topics]
     
-    # Pick questions
+    if not filtered:
+        print("No questions found for the selected topics.")
+        return []
+    
+    # Safely sample questions up to the available total
     selected = random.sample(filtered, min(num_questions, len(filtered)))
     return selected
 
-# Test your script
-selected = generate_test('dummy_questions.json', ['Projectile Motion', 'Limits & Continuity'])
-for idx, q in enumerate(selected, 1):
-    print(f"Q{idx}: {q['question_text']}")
+if __name__ == "__main__":
+    # Test execution
+    topics = ['Projectile Motion', 'Limits & Continuity']
+    selected = generate_test('dummy_questions.json', topics)
+
+    for idx, q in enumerate(selected, 1):
+        print(f"Q{idx} [{q.get('subject')} - {q.get('topic')}]: {q.get('question_text')}")
